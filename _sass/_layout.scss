@@ -2,12 +2,17 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
-
+    height: 250px;
+    background:url(../images/head_bg.jpg) center center no-repeat;
+    background-size: cover;
+    width: 100%;
     // Positioning context for the mobile navigation icon
     position: relative;
+    display: table;
+    .wrapper{
+        display: table-cell;
+        vertical-align: middle;
+    }
 }
 
 .site-title {
@@ -24,65 +29,16 @@
 }
 
 .site-nav {
-    float: right;
-    line-height: 56px;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+    background: url(../images/me.png) center center no-repeat;
+    background-size: contain;
 
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
+    a{
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -167,9 +123,15 @@
 
 .page-heading {
     font-size: 20px;
+    background: #FFF;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
 }
 
 .post-list {
+    background: #FFF;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
     margin-left: 0;
     list-style: none;
 
@@ -234,3 +196,5 @@
         }
     }
 }
+
+

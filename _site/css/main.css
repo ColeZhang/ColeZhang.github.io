@@ -16,7 +16,7 @@ body {
   line-height: 1.5;
   font-weight: 300;
   color: #111;
-  background-color: #fdfdfd;
+  background-color: #EEEEEE;
   -webkit-text-size-adjust: 100%; }
 
 /**
@@ -110,16 +110,16 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(800px - (30px * 2));
-  max-width: calc(800px - (30px * 2));
+  max-width: -webkit-calc(1200px - (30px * 2));
+  max-width: calc(1200px - (30px * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: 30px;
   padding-left: 30px; }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1200px) {
     .wrapper {
-      max-width: -webkit-calc(800px - (30px));
-      max-width: calc(800px - (30px));
+      max-width: -webkit-calc(1200px - (30px));
+      max-width: calc(1200px - (30px));
       padding-right: 15px;
       padding-left: 15px; } }
 
@@ -146,10 +146,15 @@ pre {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
-  min-height: 56px;
-  position: relative; }
+  height: 250px;
+  background: url(../images/head_bg.jpg) center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  display: table; }
+  .site-header .wrapper {
+    display: table-cell;
+    vertical-align: middle; }
 
 .site-title {
   font-size: 26px;
@@ -161,46 +166,15 @@ pre {
     color: #424242; }
 
 .site-nav {
-  float: right;
-  line-height: 56px; }
-  .site-nav .menu-icon {
-    display: none; }
-  .site-nav .page-link {
-    color: #111;
-    line-height: 1.5; }
-    .site-nav .page-link:not(:first-child) {
-      margin-left: 20px; }
-  @media screen and (max-width: 600px) {
-    .site-nav {
-      position: absolute;
-      top: 9px;
-      right: 30px;
-      background-color: #fdfdfd;
-      border: 1px solid #e8e8e8;
-      border-radius: 5px;
-      text-align: right; }
-      .site-nav .menu-icon {
-        display: block;
-        float: right;
-        width: 36px;
-        height: 26px;
-        line-height: 0;
-        padding-top: 10px;
-        text-align: center; }
-        .site-nav .menu-icon > svg {
-          width: 18px;
-          height: 15px; }
-          .site-nav .menu-icon > svg path {
-            fill: #424242; }
-      .site-nav .trigger {
-        clear: both;
-        display: none; }
-      .site-nav:hover .trigger {
-        display: block;
-        padding-bottom: 5px; }
-      .site-nav .page-link {
-        display: block;
-        padding: 5px 10px; } }
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+  background: url(../images/me.png) center center no-repeat;
+  background-size: contain; }
+  .site-nav a {
+    display: block;
+    width: 100%;
+    height: 100%; }
 
 /**
  * Site footer
@@ -240,7 +214,7 @@ pre {
   width: -webkit-calc(45% - (30px / 2));
   width: calc(45% - (30px / 2)); }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .footer-col-1,
   .footer-col-2 {
     width: -webkit-calc(50% - (30px / 2));
@@ -249,7 +223,7 @@ pre {
   .footer-col-3 {
     width: -webkit-calc(100% - (30px / 2));
     width: calc(100% - (30px / 2)); } }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .footer-col {
     float: none;
     width: -webkit-calc(100% - (30px / 2));
@@ -261,9 +235,15 @@ pre {
   padding: 30px 0; }
 
 .page-heading {
-  font-size: 20px; }
+  font-size: 20px;
+  background: #FFF;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd; }
 
 .post-list {
+  background: #FFF;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
   margin-left: 0;
   list-style: none; }
   .post-list > li {
@@ -287,7 +267,7 @@ pre {
   font-size: 42px;
   letter-spacing: -1px;
   line-height: 1; }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1200px) {
     .post-title {
       font-size: 36px; } }
 
@@ -295,17 +275,17 @@ pre {
   margin-bottom: 30px; }
   .post-content h2 {
     font-size: 32px; }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1200px) {
       .post-content h2 {
         font-size: 28px; } }
   .post-content h3 {
     font-size: 26px; }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1200px) {
       .post-content h3 {
         font-size: 22px; } }
   .post-content h4 {
     font-size: 20px; }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1200px) {
       .post-content h4 {
         font-size: 18px; } }
 
@@ -447,3 +427,14 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+.container {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+  border: 1px solid #ebebeb;
+  display: flex;
+  flex-flow: row wrap; }
+  .container .col {
+    border: 1px solid red;
+    width: calu(28.33333%); }
